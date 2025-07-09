@@ -12,8 +12,6 @@ export class actions {
         this.registrationConfirmPassword = page.locator('#repeatPasswordControl'); 
         this.registrationSecurityQ = page.locator('#mat-select-1'); 
         this.registrationSecurityAns = page.locator('#securityAnswerControl'); 
-        this.dropDownOptionsWait = page.locator('mat-option');
-        this.selectDropDownOption = page.locator('mat-option >> text=');
         this.register = page.locator('#registration-form > #registerButton');
         this.addToCartBtn = page.locator('button', { hasText: 'Add to Basket' });
         this.email = page.locator('#email'); 
@@ -24,8 +22,8 @@ export class actions {
         this.addToCartAssertion = page.locator('.mat-mdc-snack-bar-label.mdc-snackbar__label');
         this.addToCartAssertionText = /Placed .* into basket\./;
         this.securityQ = 'mat-option >> text=';
-        this.invalideLoginError = page.locator('.error.ng-star-inserted');
-        this.invalideLoginErrorText = ('Invalid email or password.');
+        this.invalidLoginError = page.locator('.error.ng-star-inserted');
+        this.invalidLoginErrorText = ('Invalid email or password.');
     }
 
     async visit() {
@@ -65,7 +63,7 @@ export class actions {
     }
 
     async invalidLoginAssrtion() {
-        await expect(this.invalideLoginError).toHaveText(this.invalideLoginErrorText); 
+        await expect(this.invalidLoginError).toHaveText(this.invalidLoginErrorText); 
     }
 
 }

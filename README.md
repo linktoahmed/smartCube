@@ -1,6 +1,6 @@
 # SmartCube QA Automation Assessment
 
-This project is a QA automation framework built with [Playwright & JS](https://playwright.dev/) and Node.js for testing the SmartCube web application Assessment.
+This project is a QA automation framework built with [Playwright & JSgit sNPX ](https://playwright.dev/) and Node.js for testing the SmartCube web application Assessment.
 
 ## 📦 Tech Stack
 

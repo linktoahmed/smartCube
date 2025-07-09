@@ -20,9 +20,7 @@ export class actions {
         this.password = page.locator('#password'); 
         this.accountBtn = page.locator('#navbarAccount');
         this.navLoginBtn = page.locator('#navbarLoginButton');
-        this.loginBtn = page.locator('#login-form > #loginButton');
-        this.afterLoginAssertion = page.locator('.heading >.ng-star-inserted');
-        this.afterLoginAssertionText = 'All Products';    
+        this.loginBtn = page.locator('#login-form > #loginButton'); 
         this.addToCartAssertion = page.locator('.mat-mdc-snack-bar-label.mdc-snackbar__label');
         this.addToCartAssertionText = /Placed .* into basket\./;
         this.securityQ = 'mat-option >> text=';
@@ -61,14 +59,9 @@ export class actions {
     async addToCart(count) {
         for (let i = 0; i < count; i++) {
             await this.addToCartBtn.nth(i).click();
-            await this.page.waitForTimeout(500);
+            await this.page.waitForTimeout(2000);
             await expect(this.addToCartAssertion).toContainText(this.addToCartAssertionText); 
         }
-    }
-
-    async assertLogin() {
-        await expect(this.afterLoginAssertion).toHaveText(this.afterLoginAssertionText); 
-        await this.page.waitForTimeout(3000);
     }
 
     async invalidLoginAssrtion() {

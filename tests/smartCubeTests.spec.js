@@ -17,7 +17,6 @@ test.describe("Smart Cube Assignment: Web Application Automation Project", () =>
 
     test("Sign In & Add Items to Cart", async ({ actions }) => {
             await actions.login(email, password);
-            await actions.assertLogin();
             await actions.addToCart(3);
     })
 

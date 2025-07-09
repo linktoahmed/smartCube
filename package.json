@@ -1,0 +1,25 @@
+{
+  "name": "smartcube",
+  "version": "1.0.0",
+  "description": "Assessment",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linktoahmed/smartCube.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linktoahmed/smartCube/issues"
+  },
+  "homepage": "https://github.com/linktoahmed/smartCube#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^24.0.10"
+  },
+  "dependencies": {
+    "moment": "^2.30.1"
+  }
+}
